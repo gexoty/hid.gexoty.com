@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gexoty Hid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="icon" href="logo.png">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #6b630a;
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background-color: #94994c;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+        }
+
+        main {
+            flex: 1;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #72733b;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #f2ff81;
+        }
+
+        th {
+            background-color: #99984c;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #7b7a3e;
+        }
+
+        tr:hover {
+            background-color: #95995b;
+        }
+
+        .copy-button, .play-button {
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #98994c;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: none;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .copy-button:hover, .play-button:hover {
+            background-color: #ecff81;
+            transform: scale(1.05);
+        }
+
+        footer {
+            width: 100%;
+            background-color: #99944c;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #f2ff81;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .heart-link {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .heart-link a {
+            color: #fdff81;
+            text-decoration: none;
+        }
+
+        .heart-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Ссылка скопирована в буфер обмена: ' + text);
+            }, function(err) {
+                console.error('Ошибка при копировании текста: ', err);
+            });
+        }
+
+        function playVideo(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="https://gexoty.com" target="_blank">
+            <img src="logo.png" alt="Gexoty Logo">
+        </a>
+        <h1>Gexoty's Hid Profiles</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Описание</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AntiZapret (Запускать my_presets.cmd)</td>
+                    <td><button class="play-button" onclick="playVideo('https://hid.gexoty.com/fix.zip')"><i class="fas fa-play"></i> Скачать</button></td>
+                </tr>
+                <tr>
+                    <td>AntiZapret v2 (Запускать fix.exe)</td>
+                    <td><button class="play-button" onclick="playVideo('https://hid.gexoty.com/fix.exe')"><i class="fas fa-play"></i> Скачать</button></td>
+                </tr>
+                <tr>
+                    <td>Hiddify Windows (Параметры конфигурации -> Режим работы -> VPN)</td>
+                    <td><button class="play-button" onclick="playVideo('https://github.com/hiddify/hiddify-app/releases/download/v2.0.5/Hiddify-Windows-Setup-x64.exe')"><i class="fas fa-play"></i> Скачать</button></td>
+                </tr>
+                <tr>
+                    <td>Hiddify Android</td>
+                    <td><button class="play-button" onclick="playVideo('https://github.com/hiddify/hiddify-app/releases/download/v2.0.5/Hiddify-Android-universal.apk')"><i class="fas fa-play"></i> Скачать</button></td>
+                </tr>
+                <tr>
+                  <td>Profile 1000GB (Сброс каждые 3 дня)</td>
+                  <td><button class="copy-button" onclick="copyToClipboard('vless://68c601e8-9ba8-436d-a9b9-358ce11eb7cd@vps3.gxt.su:443?type=tcp&security=reality&pbk=2hM2PwxRf-x0OznPa0Ei8BjVVl2UEW64RW1UbaxkPm8&fp=chrome&sni=google.com&sid=713b15a7&spx=%2F&flow=xtls-rprx-vision#vpn-Hid')"><i class="fas fa-copy"></i> Скопировать Профиль</button></td>
+                </tr>
+                <tr>
+                    <td>За покупкой безлимитного профиля обращаться сюда</td>
+                    <td><button class="play-button" onclick="playVideo('https://t.me/gexoty')"><i class="fas fa-play"></i> Telegram</button></td>
+                </tr>
+                <!-- Добавьте больше строк по необходимости -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2025 <a href="https://gexoty.com" target="_blank">gexoty.com</a></p>
+        <div class="heart-link">
+            <a href="https://gexoty.com/donate" target="_blank"><i class="fas fa-heart"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
+
